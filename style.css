@@ -1,0 +1,98 @@
+body {
+    overflow: hidden;
+}
+
+.burger {
+    position: absolute;
+    width: 380px;
+    display: block;
+    margin: auto;
+    left: 0;
+    right: 0;
+    animation-duration: 5.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#brot1 {
+    z-index: 1;
+    animation-name: brot-unten;
+}
+
+#fleisch {
+    z-index: 2;
+    animation-name: fleisch;
+}
+
+#brot2 {
+    z-index: 3;
+    animation-name: brot-oben;
+}
+
+#teller {
+    width: auto;
+    top: 74vh;
+    z-index: 0;
+    animation-name: teller;
+}
+
+@keyframes brot-unten {
+    0%,
+    10% {
+        transform: translateY(-50vh);
+    }
+    30%,
+    60% {
+        transform: translateY(80vh);
+    }
+    80%,
+    100% {
+        transform: translate(200vw, 80vh);
+    }
+}
+
+@keyframes fleisch {
+    0%,
+    20% {
+        transform: translateY(-50vh);
+    }
+    40%,
+    60% {
+        transform: translateY(70vh);
+    }
+    80%,
+    100% {
+        transform: translate(200vw, 70vh);
+    }
+}
+
+@keyframes brot-oben {
+    0%,
+    30% {
+        transform: translateY(-50vh);
+    }
+    50%,
+    60% {
+        transform: translateY(60.5vh);
+    }
+    80%,
+    100% {
+        transform: translate(200vw, 60.5vh);
+    }
+}
+
+
+@keyframes teller {
+    0% {
+        transform: translateX(-100vw);
+    }
+    10%,
+    60% {
+        transform: translate(0);
+    }
+    80%,
+    100% {
+        transform: translateX(200vw);
+    }
+}
