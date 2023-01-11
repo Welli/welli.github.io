@@ -1,0 +1,28 @@
+$btn-size: 50px;
+
+body, body * {
+    font-size: large;
+}
+
+.table {
+    // margin-left: 30px;
+    border-collapse: collapse;
+    width: 100%;
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 5px;
+        height: $btn-size;
+    }
+}
+
+.last-col {
+    width: $btn-size;
+    border: none !important;
+}
+
+.point-button {
+    width: $btn-size;
+    height: $btn-size;
+}

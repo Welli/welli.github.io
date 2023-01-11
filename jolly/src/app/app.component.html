@@ -1,0 +1,53 @@
+<div style="margin-bottom: 2px;">
+	Gewinngrenze <input type="number" [(ngModel)]="pointsToWin">
+</div>
+
+<div *ngIf="players.length === 0">
+	<span>
+		Anzahl an Spielern
+		<input type="number" min="2" value="3" style="width: 50px" #playercount />
+	</span>
+	<div>
+		<button type="button" (click)="start(playercount.value)">Start</button>
+	</div>
+</div>
+
+<ng-container *ngIf="players.length > 1">
+	<div style="width: 100%; margin-top: 10px;">
+		<table class="table">
+			<thead>
+				<td class="last-col"></td>
+				<th *ngFor="let player of players">
+					{{ player.name }}
+				</th>
+				<td class="last-col"></td>
+			</thead>
+			<tbody>
+				<tr *ngFor="let round of rounds; let last = last">
+					<td class="last-col"></td>
+					<td *ngFor="let player of players">
+						{{ round.pointsPerPlayer[player.id] }}
+					</td>
+				</tr>
+				<tr>
+					<td class="last-col"></td>
+					<td *ngFor="let player of players">
+
+					</td>
+					<td class="last-col">
+						<button type="button" class="point-button" (click)="setPoints()">+</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</ng-container>
+
+<dialog #winModal>
+	<form method="dialog">
+		<p>
+			Gewonnen hat: {{ getWinningPlayerNames() }}
+		</p>
+		<button type="submit">Ok</button>
+	</form>
+</dialog>
