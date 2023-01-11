@@ -48,7 +48,7 @@ export class AppComponent {
 		}
 	}
 
-	private reset() {
+	reset() {
 		this.players = [];
 		this.rounds = [];
 		this.winningPlayers = [];
