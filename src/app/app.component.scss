@@ -1,0 +1,17 @@
+.container-padding {
+	padding: 1rem;
+}
+
+table {
+
+	th,
+	tr {
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	th {
+		position: sticky;
+		top: 0;
+	}
+}

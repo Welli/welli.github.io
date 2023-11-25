@@ -1,28 +1,49 @@
-$btn-size: 40px;
+$btn-size: 52px;
+$background: #dddddd;
 
-body, body * {
-    font-size: large;
+body,
+body * {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: large;
+}
+
+body {
+	background-color: $background;
+	overflow-y: auto !important;
 }
 
 .table {
-    // margin-left: 30px;
-    border-collapse: collapse;
-    width: 100%;
+	// margin-left: 30px;
+	border-collapse: separate;
+	border-spacing: 0px;
+	width: 100%;
 
-    td, th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 5px;
-        height: $btn-size;
-    }
+	td,
+	th {
+		border: 1px solid #555555;
+		text-align: left;
+		padding: 5px;
+		height: $btn-size;
+	}
+
+	th {
+		background-color: $background;
+	}
 }
 
 .last-col {
-    width: $btn-size;
-    border: none !important;
+	width: $btn-size;
+	border: none !important;
+}
+
+.remove-button {
+	width: $btn-size;
+	height: 100%;
+	font-size: x-large;
 }
 
 .point-button {
-    width: $btn-size;
-    height: $btn-size;
+	width: 100px;
+	height: 75px;
+	font-size: x-large;
 }
